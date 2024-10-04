@@ -1,0 +1,51 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "clients": "Clients",
+    "contact": "Contact"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "home": {
+    "title": "InterpretingBooth - Translation and Interpretation Services",
+    "welcome": "Welcome to InterpretingBooth",
+    "description": "Professional translation and interpretation services for all your needs.",
+    "services": "Our Services",
+    "service1": "Document Translation",
+    "service2": "Simultaneous Interpretation",
+    "service3": "Consecutive Interpretation",
+    "whyUs": "Why Choose Us",
+    "reason1": "Experienced professionals",
+    "reason2": "Wide range of language pairs",
+    "reason3": "Quick turnaround times"
+  },
+  "services": {
+    "title": "Our Services",
+    "translation": "Translation",
+    "translationDesc": "Professional document translation for various industries.",
+    "interpretation": "Interpretation",
+    "interpretationDesc": "Simultaneous and consecutive interpretation for conferences and events.",
+    "localization": "Localization",
+    "localizationDesc": "Adapting content to specific cultural and linguistic contexts."
+  },
+  "clients": {
+    "title": "Our Clients",
+    "client1": "Global Corp",
+    "client1Desc": "Provided interpretation services for their annual conference.",
+    "client2": "Tech Innovators",
+    "client2Desc": "Localized their software products for multiple markets.",
+    "client3": "Legal Experts",
+    "client3Desc": "Translated complex legal documents for international cases."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Send Message"
+  }
+}

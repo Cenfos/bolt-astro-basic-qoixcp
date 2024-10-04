@@ -1,0 +1,28 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import LanguageSelector from './LanguageSelector.astro';
+import ThemeToggle from "./ThemeToggle";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<header class="bg-white dark:bg-gray-800 shadow-md">
+  <nav class="container mx-auto px-6 py-3">
+    <div class="flex justify-between items-center">
+      <div class="text-xl font-bold text-gray-800 dark:text-white">
+        InterpretingBooth
+      </div>
+      <div class="hidden md:flex space-x-4">
+        <a href={`/${lang}/`} class="text-gray-800 dark:text-white hover:text-gray-600 dark:hover:text-gray-300">{t('nav.home')}</a>
+        <a href={`/${lang}/services`} class="text-gray-800 dark:text-white hover:text-gray-600 dark:hover:text-gray-300">{t('nav.services')}</a>
+        <a href={`/${lang}/clients`} class="text-gray-800 dark:text-white hover:text-gray-600 dark:hover:text-gray-300">{t('nav.clients')}</a>
+        <a href={`/${lang}/contact`} class="text-gray-800 dark:text-white hover:text-gray-600 dark:hover:text-gray-300">{t('nav.contact')}</a>
+      </div>
+      <div class="flex items-center space-x-4">
+        <ThemeToggle client:load />
+        <LanguageSelector />
+      </div>
+    </div>
+  </nav>
+</header>

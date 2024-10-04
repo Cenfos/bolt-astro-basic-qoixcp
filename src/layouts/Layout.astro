@@ -1,0 +1,85 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { getLangFromUrl } from '../i18n/utils';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+---
+
+<!doctype html>
+<html lang={lang}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="InterpretingBooth - Translation and Interpretation Services" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<Header />
+		<main class="container mx-auto px-6 py-8">
+			<slot />
+		</main>
+		<Footer />
+	</body>
+</html>
+<style is:global>
+	:root {
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background: #F6F6F6;
+		background-size: 224px;
+	}
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+	.dark {
+		background: #13151A;
+		color: #fff;
+	}
+	.language-selector {
+		@apply bg-white dark:bg-gray-700 text-gray-800 dark:text-white p-2 rounded;
+	}
+</style>
+
+<script>
+  // Check for saved dark mode preference on page load
+  if (localStorage.getItem('darkMode') === 'true') {
+    document.documentElement.classList.add('dark');
+  }
+
+  // This will run on every page navigation
+  document.addEventListener('astro:page-load', () => {
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    if (darkModeToggle) {
+      darkModeToggle.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+        localStorage.setItem('darkMode', document.documentElement.classList.contains('dark'));
+      });
+    }
+  });
+</script>

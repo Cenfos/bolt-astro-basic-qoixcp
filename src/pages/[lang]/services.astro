@@ -1,0 +1,37 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import { languages } from '../../i18n/ui';
+
+export function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = useTranslations(lang);
+---
+
+<Layout title={t('services.title')}>
+	<div class="container mx-auto px-4 py-8">
+		<h1 class="text-4xl font-bold text-center mb-8 text-gray-800 dark:text-white">
+			{t('services.title')}
+		</h1>
+		<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+			<div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
+				<img src="https://via.placeholder.com/300x200?text=Translation" alt="Translation" class="w-full h-40 object-cover mb-4 rounded">
+				<h2 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-white">{t('services.translation')}</h2>
+				<p class="text-gray-600 dark:text-gray-300">{t('services.translationDesc')}</p>
+			</div>
+			<div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
+				<img src="https://via.placeholder.com/300x200?text=Interpretation" alt="Interpretation" class="w-full h-40 object-cover mb-4 rounded">
+				<h2 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-white">{t('services.interpretation')}</h2>
+				<p class="text-gray-600 dark:text-gray-300">{t('services.interpretationDesc')}</p>
+			</div>
+			<div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
+				<img src="https://via.placeholder.com/300x200?text=Localization" alt="Localization" class="w-full h-40 object-cover mb-4 rounded">
+				<h2 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-white">{t('services.localization')}</h2>
+				<p class="text-gray-600 dark:text-gray-300">{t('services.localizationDesc')}</p>
+			</div>
+		</div>
+	</div>
+</Layout>

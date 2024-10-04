@@ -1,0 +1,51 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "clients": "Clients",
+    "contact": "Contact"
+  },
+  "footer": {
+    "rights": "Tous droits réservés.",
+    "privacy": "Politique de Confidentialité",
+    "terms": "Conditions d'Utilisation"
+  },
+  "home": {
+    "title": "InterpretingBooth - Services de Traduction et d'Interprétation",
+    "welcome": "Bienvenue chez InterpretingBooth",
+    "description": "Services professionnels de traduction et d'interprétation pour tous vos besoins.",
+    "services": "Nos Services",
+    "service1": "Traduction de Documents",
+    "service2": "Interprétation Simultanée",
+    "service3": "Interprétation Consécutive",
+    "whyUs": "Pourquoi Nous Choisir",
+    "reason1": "Professionnels expérimentés",
+    "reason2": "Large gamme de paires linguistiques",
+    "reason3": "Délais de livraison rapides"
+  },
+  "services": {
+    "title": "Nos Services",
+    "translation": "Traduction",
+    "translationDesc": "Traduction professionnelle de documents pour diverses industries.",
+    "interpretation": "Interprétation",
+    "interpretationDesc": "Interprétation simultanée et consécutive pour conférences et événements.",
+    "localization": "Localisation",
+    "localizationDesc": "Adaptation de contenu à des contextes culturels et linguistiques spécifiques."
+  },
+  "clients": {
+    "title": "Nos Clients",
+    "client1": "Global Corp",
+    "client1Desc": "Nous avons fourni des services d'interprétation pour leur conférence annuelle.",
+    "client2": "Tech Innovators",
+    "client2Desc": "Nous avons localisé leurs produits logiciels pour plusieurs marchés.",
+    "client3": "Experts Juridiques",
+    "client3Desc": "Nous avons traduit des documents juridiques complexes pour des affaires internationales."
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "name": "Nom",
+    "email": "E-mail",
+    "message": "Message",
+    "submit": "Envoyer le Message"
+  }
+}
