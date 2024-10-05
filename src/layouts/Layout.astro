@@ -78,8 +78,9 @@ const lang = getLangFromUrl(Astro.url);
     if (darkModeToggle) {
       darkModeToggle.addEventListener('click', () => {
         document.documentElement.classList.toggle('dark');
-        localStorage.setItem('darkMode', document.documentElement.classList.contains('dark'));
+        localStorage.setItem('darkMode', document.documentElement.classList.contains('dark').toString());
       });
     }
   });
+</script>
 </script>
